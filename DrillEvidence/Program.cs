@@ -27,7 +27,20 @@ namespace DrillEvidence
             Console.WriteLine("\n======================  (c) arithmetic operators  ======================\n");
             Oparetors();
 
+            Console.WriteLine("\n======================  (c) POST-PREfix  ======================\n");
+            PostPreFix();
             Console.ReadKey();
+        }
+
+        private static void PostPreFix()
+        {
+            int num1 = 10;
+            Console.WriteLine($"Initial Value: {num1}");
+            int preFixResult = ++num1;
+            Console.WriteLine($"\nPre-Fix Increment: ++Value = {preFixResult} (num1 is now {num1})");
+            num1 = 10;
+            int postFixResult = num1++;
+            Console.WriteLine($"\nPost-Fix Increment: Value++ = {postFixResult} (num1 is now {num1})");
         }
 
         private static void Oparetors()

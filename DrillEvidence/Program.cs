@@ -20,7 +20,38 @@ namespace DrillEvidence
             Console.WriteLine("\n======================  (b) SHORT CIRCUIT  ======================");
             ShortCircuit();
 
+
+            Console.WriteLine("\n======================  (c) Declaring, naming & assigning variable, using primitive data types  ======================\n");
+            Variables();
+
+            Console.WriteLine("\n======================  (c) arithmetic operators  ======================\n");
+            Oparetors();
+
             Console.ReadKey();
+        }
+
+        private static void Oparetors()
+        {
+            int a = 61, b = 66;
+            Console.WriteLine("Addition :\n "+ $"{a} + {b} = {a + b}");
+            Console.WriteLine($"\nSubstraction :\n {a} - {b} = {a - b}");
+            Console.WriteLine($"\nMultiplication :\n {a} * {b} = {a * b}");
+            Console.WriteLine($"\nDivision :\n {a} / {b} = {a / b}");
+            Console.WriteLine($"\nModulus :\n {a} % {b} = {a % b}");
+        }
+
+        private static void Variables()
+        {
+            int IntVar = 22;
+            double DoubleVar = 22.5D;
+            string StringVar = "Nakibul Islam Fahim";
+            bool BoolVar = true;
+            float FloatVar = 22.7F;
+            long LongVar = 225000L;
+            decimal DecimalVar = 22500.55M;
+            DateTime DateTimeVar = DateTime.Now;
+            var ImplicitVar = 213123123L;
+            Console.WriteLine($"{IntVar}, {DoubleVar}, {StringVar}, {BoolVar}, {FloatVar}, {LongVar}, {DecimalVar}, {DateTimeVar:f}, {ImplicitVar}");
         }
 
         private static void ShortCircuit()

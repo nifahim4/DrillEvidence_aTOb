@@ -11,12 +11,15 @@ namespace DrillEvidence
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\n======================  Decision  ======================");
+            Console.WriteLine("\n======================  (a) Decision  ======================");
             Decision();
-            Console.WriteLine("\n======================  LOOPS  ======================");
+
+            Console.WriteLine("\n======================  (a) LOOPS  ======================");
             Loops();
-            Console.WriteLine("\n======================  SHORT CIRCUIT  ======================");
+
+            Console.WriteLine("\n======================  (b) SHORT CIRCUIT  ======================");
             ShortCircuit();
+
             Console.ReadKey();
         }
 

@@ -29,7 +29,102 @@ namespace DrillEvidence
 
             Console.WriteLine("\n======================  (c) POST-PREfix  ======================\n");
             PostPreFix();
+
+            Console.WriteLine("\n======================  (d) Methods  ======================\n");
+            MethodsParameters1(1, "NAKIBUL");
+            MethodsParameters2(msg: "ISLAM", n: 2);
+            MethodsOptionalParameters();
+            int sum = Addition(10, 20);
+            Console.WriteLine(sum);
+
+            Console.WriteLine("\n======================  (e) Checked and UNchecked  ======================\n");
+            CheckedUnchecked();
+
+            Console.WriteLine("\n======================  (f) TRY-CATCH-FINALLY  ======================\n");
+            TryCatchFinally();
+
             Console.ReadKey();
+        }
+
+        private static void TryCatchFinally()
+        {
+            int x = 10, y = 0;
+            try
+            {
+                Console.WriteLine(x / y);
+                throw new Exception("Fatal ERROR!!!!!!!!!");
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Execution completed.");
+            }   
+        }
+
+        private static void CheckedUnchecked()
+        {
+            int n = int.MaxValue;
+            checked
+            {
+                try
+                {
+                    n++;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            unchecked
+            {
+                n++;
+                Console.WriteLine(n);
+            }
+        }
+
+        private static int Addition(int a, int b)
+        {
+            Console.WriteLine("\n\nMethod with Returns: \n");
+            return a + b;
+        }
+
+        private static void MethodsOptionalParameters(int n = 1, string msg = "NAKIBUL")
+        {
+            Console.WriteLine("\n\nMethod with Optional Parameters: \n");
+            for (n = 0; n < 5; n++)
+            {
+                Console.Write($"{msg} \t");
+            }
+
+        }
+
+        private static void MethodsParameters2(int n, string msg)
+        {
+            Console.WriteLine("\n\nMethod call by parameters Name: \n");
+            for (n = 0; n < 5; n++)
+            {
+                Console.Write($"{msg} \t");
+            }
+        }
+
+        private static void MethodsParameters1(int n, string msg)
+        {
+            Console.WriteLine("Method call by Parameters: \n");
+            for (n = 0; n < 5; n++)
+            {
+                Console.Write($"{msg} \t");
+            }
         }
 
         private static void PostPreFix()
